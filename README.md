@@ -1,17 +1,63 @@
 # Backend-OpticaMiroo
 
-Instrucciones para la configuración y ejecución del proyecto
+---
 
-Iniciar XAMPP: Antes de comenzar, asegúrate de tener XAMPP instalado y en ejecución. Abre el panel de control de XAMPP y activa los servicios de Apache y MySQL. Esto es fundamental para que el sistema pueda conectarse correctamente a la base de datos local.
+# **Instrucciones para la configuración y ejecución del backend (Spring Boot)**
 
-Creación del esquema en MySQL: Una vez que MySQL esté activo, accede a phpMyAdmin o utiliza tu cliente de base de datos preferido para crear un nuevo esquema con el nombre base. Este esquema será utilizado por el backend para almacenar y gestionar la información de la aplicación.
+## **1. Iniciar XAMPP**
 
-Verificación de las tablas: Revisa si las tablas necesarias ya están creadas y pobladas en el esquema. Si no es así, deberás ejecutar el script SQL correspondiente para generar la estructura y los datos iniciales. Esto garantiza que la aplicación cuente con la información mínima necesaria para funcionar correctamente.
+Asegúrate de tener **XAMPP instalado y en ejecución**.
+En el panel de control de XAMPP:
 
-Ejecución del backend (Spring Boot): Abre el proyecto backend en Visual Studio Code (VS Code) o en tu entorno de desarrollo preferido. Asegúrate de que las dependencias estén correctamente instaladas y luego inicia el servidor de Spring Boot. Una vez ejecutado, el backend debería conectarse automáticamente a la base de datos “base” que configuraste en el paso anterior.
+* Activa **Apache**
+* Activa **MySQL**
 
-Ejecución del frontend (React): Finalmente, abre una terminal en la carpeta del proyecto React y ejecuta el siguiente comando:
+El backend necesita que MySQL esté funcionando para poder conectarse a la base de datos.
 
-npm run dev
+---
 
-Este comando iniciará el servidor de desarrollo de React. Una vez en funcionamiento, podrás visualizar la aplicación desde tu navegador web, usualmente en la dirección: http://localhost:5173/ (o el puerto que se indique en la terminal).
+## **2. Crear el esquema en MySQL**
+
+Con MySQL activo:
+
+1. Abre **phpMyAdmin** (o cualquier cliente MySQL).
+2. Crea un nuevo esquema (base de datos) llamado:
+
+```
+base
+```
+
+Este esquema será utilizado por el backend.
+
+---
+
+## **3. Verificar o crear las tablas**
+
+Revisa el esquema `base`:
+
+* Si las tablas necesarias **ya existen**, no tienes que hacer nada.
+* Si **no existen**, ejecuta el **script SQL** proporcionado para crear las tablas y datos iniciales.
+
+Esto asegura que la aplicación tenga la estructura mínima para funcionar.
+
+---
+
+## **4. Ejecutar el backend (Spring Boot) con VS Code**
+
+1. Abre el proyecto del backend en **Visual Studio Code**.
+
+2. Asegúrate de tener instalada la extensión:
+
+   **Spring Boot Extension Pack**
+   (incluye el **Spring Boot Dashboard**)
+
+3. En la barra lateral de VS Code, busca el panel:
+
+   **Spring Boot Dashboard**
+
+4. Dentro del panel, selecciona tu aplicación Spring Boot y presiona:
+
+   **Run** (▶️)
+
+La aplicación iniciará y se conectará automáticamente a la base de datos `base`.
+
