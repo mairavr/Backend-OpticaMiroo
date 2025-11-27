@@ -7,12 +7,12 @@
 ## **1. Iniciar XAMPP**
 
 Asegúrate de tener **XAMPP instalado y en ejecución**.
-En el panel de control de XAMPP:
+En el panel de control de XAMPP activa:
 
-* Activa **Apache**
-* Activa **MySQL**
+* **Apache**
+* **MySQL**
 
-El backend necesita que MySQL esté funcionando para poder conectarse a la base de datos.
+El backend necesita MySQL para conectarse correctamente a la base de datos.
 
 ---
 
@@ -20,44 +20,63 @@ El backend necesita que MySQL esté funcionando para poder conectarse a la base 
 
 Con MySQL activo:
 
-1. Abre **phpMyAdmin** (o cualquier cliente MySQL).
-2. Crea un nuevo esquema (base de datos) llamado:
+1. Abre **phpMyAdmin** (o tu cliente MySQL preferido).
+2. Crea un nuevo esquema con el nombre:
 
 ```
 base
 ```
 
-Este esquema será utilizado por el backend.
+Este será el esquema utilizado por el backend.
 
 ---
 
 ## **3. Verificar o crear las tablas**
 
-Revisa el esquema `base`:
+Ingresa al esquema `base` y revisa si ya existen las tablas necesarias.
 
-* Si las tablas necesarias **ya existen**, no tienes que hacer nada.
-* Si **no existen**, ejecuta el **script SQL** proporcionado para crear las tablas y datos iniciales.
+* Si **ya existen**, continúa al siguiente paso.
+* Si **no existen**, ejecuta el **script SQL** correspondiente para generar la estructura de la base de datos (tablas, relaciones y datos iniciales).
 
-Esto asegura que la aplicación tenga la estructura mínima para funcionar.
+Esto garantiza que la aplicación tenga la estructura necesaria para funcionar.
 
 ---
 
-## **4. Ejecutar el backend (Spring Boot) con VS Code**
+## **4. Ejecutar el backend (Spring Boot) desde VS Code**
 
-1. Abre el proyecto del backend en **Visual Studio Code**.
+1. Abre la carpeta del proyecto backend en **Visual Studio Code**.
 
 2. Asegúrate de tener instalada la extensión:
 
    **Spring Boot Extension Pack**
    (incluye el **Spring Boot Dashboard**)
 
-3. En la barra lateral de VS Code, busca el panel:
+3. En la barra lateral de VS Code, localiza el panel:
 
    **Spring Boot Dashboard**
 
-4. Dentro del panel, selecciona tu aplicación Spring Boot y presiona:
+4. Selecciona tu aplicación Spring Boot y presiona:
 
    **Run** (▶️)
 
-La aplicación iniciará y se conectará automáticamente a la base de datos `base`.
+Esto iniciará el servidor backend, el cual se conectará automáticamente a la base de datos `base`.
 
+---
+
+## **5. Credenciales de prueba**
+
+Puedes usar los siguientes usuarios de prueba para iniciar sesión en el sistema:
+
+### **Administrador**
+
+```
+Correo: carlos.munoz@opticamiroo.cl
+Contraseña: cmunozmiroo123
+```
+
+### **Cliente**
+
+```
+Correo: juan.perez@opticamiroo.cl
+Contraseña: Jperez#2025
+```
